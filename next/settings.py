@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import dj-database-url
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,7 +90,7 @@ DATABASES = {
     }
 }
 
-db_from_env = dj-database-url.config(conn_max_age500)
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update (db_from_env)
 
 # Password validation
@@ -128,7 +128,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'assets'
 STATICFILES_DIRS = [
