@@ -92,4 +92,34 @@
     </div>
 </div>
 
+<div class="row">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ชื่อบทความ</th>
+      <th scope="col">ชื่อจริง</th>
+      <th scope="col">นามสกุล</th>
+      <th scope="col">email</th>
+      <th scope="col">วันที่ตีพิมพ์</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for article in articles %}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{article.head_line}}</td>
+      <td>{{article.reporter.first_name}}</td>
+      <td>{{article.reporter.last_name}}}}</td>
+      <td>{{article.reporter.email}}</td>
+      <td>{{article.pub_date}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+
+
 {% endblock %}
